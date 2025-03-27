@@ -1,0 +1,34 @@
+/*el CSS sigue un metodo de cascada por lo tanto los child obtendran las propiedades del parent a no ser que se especifiquen*/
+
+
+*{/* el padre de los padres */
+    margin: 0;/*define la separacion con los demas contenedores de afuera*/
+    padding: 0;/*define la separacion con los demas contenedores de adentro*/
+    box-sizing: border-box;/*evita la modificacion en los tamaños por el padding*/
+}
+
+
+body{
+    height: 100vh;/* alto del body unidad viewport heigth, solo utlizar en body*/
+    background-color: #444444;/*define color del fondo del contenedor*/
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+.tarjeta{
+    border: solid 3px yellow;/*genera un borde y le aplica las propiedad indicadas*/
+    width: 50%;/* 50% indica que va utilizar el 50% del parent en el que se encuentra*/
+    height: 100%!important;/*!important permite evitar que se modifiquen los datos aunque se vuelva a modificar la propiedad del cotenedor*/
+    /*el overflow es una etiqueta que nos permite controlar lo que desborda del contenedor*/
+    overflow: auto;/*genera barras para despalazamiento si sale del contenedor*/
+    overflow: scroll;/*genera barras de desplazamiento aunque no salga del contenedor*/
+    overflow: hidden;/*corta todo lo que sale del contenedor*/
+    overflow-y: auto;/*genera barras para desplazamiento si sale del eje y*/
+    overflow-x: hidden;/*corta todo lo que sale del contenedor*/
+}
+.cabecera{
+    background-color: #7040DF;
+}
+.data{
+    background-color: white;
+}
